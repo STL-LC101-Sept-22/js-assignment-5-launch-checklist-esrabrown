@@ -77,7 +77,7 @@ function formSubmission(document, pilot, copilot, fuelLevel, cargoMass) {
 
 
     else if(fuelLevel >= 10000 && cargoMass <= 10000){
-        document.getElementById("faultyItems").style.visibility = 'visible';
+        document.getElementById("faultyItems").style.visibility = 'hidden';
         document.getElementById("fuelStatus").innerHTML = "Fuel level is enough for launch!";
         document.getElementById("cargoStatus").innerHTML = "Cargo mass is enough for launch!";
         document.getElementById("pilotStatus").innerHTML = `Pilot ${pilot} is ready for launch!`;
