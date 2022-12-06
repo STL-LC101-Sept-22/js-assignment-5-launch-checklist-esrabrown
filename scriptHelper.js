@@ -2,10 +2,12 @@ const { parseIsolatedEntityName } = require('typescript');
 
 // Write your helper functions here!
 require('isomorphic-fetch');
-let container = window.document
+
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
    // Here is the HTML formatting for our mission target div.
-    
+    window.addEventListener ("load", function(){
+        container=window.document;
+
     document.getElementById("missionTarget").innerHTML =`
                 <h2>Mission Destination</h2>
                 <ol>
@@ -17,6 +19,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                 </ol>
                 <img src="${imageUrl}">
    `;
+    });
 };
 
 function validateInput(testInput) {
